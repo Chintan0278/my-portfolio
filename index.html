@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chintan - Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    .zoom-effect img {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .zoom-effect img:hover {
+      transform: scale(1.2);
+    }
+
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 100; /* High z-index for modal */
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto; /* Enable scrolling for large images */
+      background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%; /* Adjust width as needed */
+      max-width: 700px;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #aaa;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+
+
+</head>
+
+
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/chintanav.png" alt="Chintan Parmar" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Chintan Parmar">Chintan Parmar</h1>
+
+          <p class="title">Web developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:parmarchintan25836@gmail.com" class="contact-link">parmarchintan25836@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+919979136716" class="contact-link">+91 9979136716</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">June 04, 2002</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Ankleshwar, Gujarat, India</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.facebook.com/chintan.mahiyavanshi?mibextid=ZbWKwL" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://x.com/_chintan_x" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/chintan_0462?igsh=MTc2cDUyem5jYzU3Zw== " class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+         
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+          Aspiring computer engineer with a passion for programming and
+graphic design, seeking opportunities to apply my skills in web
+development and design to contribute to innovative projects.
+Highly motivated to leverage my three years of experience in
+graphic design and extensive knowledge in both frontend and
+backend development to create visually appealing and functional
+web solutions. Eager to work in a dynamic environment where I
+can continue to learn and grow professionally while making
+meaningful contributions to the team.
+          </p>
+
+          
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/graphic.png" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Graphic designing</h4>
+
+                <p class="service-item-text">
+                  Professional high-quality graphic designs at the professional level..
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Photography</h4>
+
+                <p class="service-item-text">
+                  I make high-quality photos of any category at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+       
+
+        
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Clients</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/clgpng.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+              <img src="./assets/images/GDSC.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">UPL University of Sustainable Technology</h4>
+
+              <span>2021 — present</span>
+
+              <p class="timeline-text">
+                Bachelor of Engineering in Computer Engineering (7th Semester)
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Shree Gattu Vidhyalaya, GSEB Board, Gujarat </h4>
+
+              <span>2019 — 2021</span>
+
+              
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience / Internships</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Graphic Designer at UPL University, Gujarat</h4>
+
+              <span>2021 — Present</span>
+
+              <p class="timeline-text">
+                Created posters, posts, banners, and other graphic content for university events and announcements. Collaborated with various university departments to design promotional materials.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Frontend Developer Intern at Techomax solution</h4>
+
+              <span>2021 (a week)</span>
+
+              <p class="timeline-text">
+                Gained foundational knowledge in web development using HTML and CSS. Assisted in developing and maintaining the company's website.
+                
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Graphic Design Intern at Arena animation</h4>
+
+              <span>2022 (half month)</span>
+
+              <p class="timeline-text">
+                Enhanced graphic designing skills using Adobe Photoshop. Created visual content for various projects and client needs.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Backend Developer Intern at Neotech solution</h4>
+
+              <span>2024 (2 month)</span>
+
+              <p class="timeline-text">
+                Learned backend development including PHP, MySQL, and data connections. Worked on integrating frontend and backend systems for web applications.
+
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web development</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Graphic design</h5>
+                <data value="80">85%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Programming Languages</h5>
+                <data value="60">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Tools & Technologies</h5>
+                <data value="50">60%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+  <header>
+    <h2 class="h2 article-title">Portfolio</h2>
+  </header>
+
+  <section class="projects">
+    <ul class="filter-list">
+      <li class="filter-item">
+        <button class="active" data-filter-btn>All</button>
+      </li>
+      <li class="filter-item">
+        <button data-filter-btn>Social Media Graphics</button>
+      </li>
+      <li class="filter-item">
+        <button data-filter-btn>Print & Marketing Materials</button>
+      </li>
+    </ul>
+
+    <div class="filter-select-box">
+      <button class="filter-select" data-select>
+        <div class="select-value" data-selecct-value>Select category</div>
+        <div class="select-icon">
+          <ion-icon name="chevron-down"></ion-icon>
+        </div>
+      </button>
+
+      <ul class="select-list">
+        <li class="select-item">
+          <button data-select-item>All</button>
+        </li>
+        <li class="select-item">
+          <button data-select-item>Social Media Graphics</button>
+        </li>
+        <li class="select-item">
+          <button data-select-item>Print & Marketing Materials</button>
+        </li>
+      </ul>
+    </div>
+
+    <ul class="project-list">
+      <li class="project-item active" data-filter-item data-category="social media graphics">
+        <a href="#" class="zoom-effect">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/project_1.png" alt="social media graphic" loading="lazy">
+          </figure>
+        </a>
+      </li>
+
+      <li class="project-item active" data-filter-item data-category="social media graphics">
+        <a href="#" class="zoom-effect">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/project_2.png" alt="social media graphic" loading="lazy">
+          </figure>
+        </a>
+        </li>
+
+
+        <li class="project-item active" data-filter-item data-category="social media graphics">
+        <a href="#" class="zoom-effect">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/project_3.png" alt="social media graphic" loading="lazy">
+          </figure>
+        </a>
+        </li>
+
+
+      <li class="project-item active" data-filter-item data-category="social media graphics">
+        <a href="#" class="zoom-effect">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/project_4.png" alt="social media graphic" loading="lazy">
+          </figure>
+        </a>
+      </li>
+
+      <li class="project-item active" data-filter-item data-category="print & marketing materials">
+        <a href="#" class="zoom-effect">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/project_5.png" alt="print & marketing material" loading="lazy">
+          </figure>
+        </a>
+      </li>
+
+      <li class="project-item active" data-filter-item data-category="print & marketing materials">
+        <a href="#" class="zoom-effect">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/project_6.png" alt="print & marketing material" loading="lazy">
+          </figure>
+        </a>
+      </li>
+
+    </ul>
+  </section>
+</article>
+
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+     
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d463.6919936584198!2d73.0091565517067!3d21.604029674031285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1724603241967!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+        
+          <form id="contactForm" action="submit_contact.php" method="POST" class="form" data-form>
+        
+            <div class="input-wrapper">
+              <input type="text" id="fullname" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+        
+              <input type="email" id="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+        
+            <textarea name="message" id="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+        
+            <button class="form-btn" type="submit" id="sendButton" data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+            <div id="responseMessage"></div>
+          </form>
+        
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();  // Prevent the form from submitting normally
+
+    var formData = new FormData(this);
+
+    fetch("submit_contact.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())  // Parse the JSON response
+    .then(data => {
+        // Display the message below the form
+        var messageDiv = document.getElementById("responseMessage");
+        if (data.status === "success") {
+            messageDiv.innerHTML = `<p style="color: green;">${data.message}</p>`;
+        } else {
+            messageDiv.innerHTML = `<p style="color: red;">${data.message}</p>`;
+        }
+    })
+    .catch(error => {
+        // Display a general error message if the request fails
+        document.getElementById("responseMessage").innerHTML = "<p style='color: red;'>An error occurred. Please try again.</p>";
+    });
+});
+
+    </script>
+
+<script>
+    document.querySelectorAll('.zoom-effect img').forEach(image => {
+    image.addEventListener('click', () => {
+        // If the image already has the zoom-in class, remove it
+        if (image.classList.contains('zoom-in')) {
+            image.classList.remove('zoom-in');
+        } else {
+            // Remove the zoom-in class from all other images
+            document.querySelectorAll('.zoom-effect img.zoom-in').forEach(img => {
+                img.classList.remove('zoom-in');
+            });
+
+            // Add the zoom-in class to the clicked image
+            image.classList.add('zoom-in');
+        }
+    });
+});
+</script>
+
+
+</body>
+
+</html>
